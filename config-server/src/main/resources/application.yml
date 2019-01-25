@@ -7,13 +7,18 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/1587391396/xxpay.git
+          uri: https://github.com/1587391396/springcloudbusdemo
           username:
           password:
-          search-paths: config-server/*
+          search-paths: springcloudbusdemo/springcloud-web/src/main/resources
+  rabbitmq:
+    host: 192.168.43.129
+    port: 5672
+    username: admin
+    password: admin
 eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://localhost:8888/eureka
+    service-url:
+      defaultZone: http://localhost:8088/eureka
